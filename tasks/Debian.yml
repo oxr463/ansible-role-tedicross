@@ -1,1 +1,26 @@
 ---
+- name: Install Node.js
+  action: apt pkg={{ item }} state=latest
+  with_items:
+    - nodejs
+
+- name: Download TediCross
+  get_url:
+    url: https://github.com/TediCross/TediCross/archive/v{{ tedicross_version }}.tar.gz
+    dest: /tmp/tedicross.tar.gz
+
+- name: Extract Tedicross into installation directory
+  unarchive:
+    src: /tmp/tedicross.tar.gz
+    dest: "{{ tedicross_install_path }}"
+    remote_src: yes
+
+- name: Configure TediCross
+  template: src="{{ item.src }}"
+            dest="{{ item.dest }}"
+            owner="{{ tedicross_user }}"
+            group="{{ tedicross_group }}"
+            mode=0644
+  with_items:
+    - { src: "tedicross.j2", dest: "{{ tedicross_install_path }}/settings.yaml" }
+

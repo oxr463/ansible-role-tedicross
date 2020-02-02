@@ -1,0 +1,29 @@
+telegram:
+  token: {{telegram_token}}
+  useFirstNameInsteadOfUsername: false
+  colonAfterSenderName: false
+  skipOldMessages: true
+  sendEmojiWithStickers: true
+discord:
+  useNickname: false
+  token: {{discord_token}}
+  skipOldMessages: true
+  displayTelegramReplies: embed
+  replyLength: 100
+  maxReplyLines: 2
+bridges:
+  - name: {{tedicross_bridge_name}}
+    direction: both
+    telegram:
+      chatId: {{telegram_chat_id}}
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      relayCommands: true
+    discord:
+      channelId: '{{discord_channel_id}}'
+      relayJoinMessages: true
+      relayLeaveMessages: true
+      sendUsernames: true
+      crossDeleteOnTelegram: true
+debug: false
