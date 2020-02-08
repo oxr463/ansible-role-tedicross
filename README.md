@@ -6,7 +6,7 @@ Ansible role for TediCross
 Install it with the following command:
 
 ```bash
-$ ansible-galaxy install oxr463.tedicross
+$ ansible-galaxy install oxr463.ansible_role_tedicross
 ```
 
 Requirements
@@ -31,7 +31,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - {role: oxr463.tedicross }
+         - { role: oxr463.ansible_role_tedicross }
 
 License
 -------
