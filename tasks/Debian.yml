@@ -23,4 +23,3 @@
             mode=0644
   with_items:
     - { src: "tedicross.j2", dest: "{{ tedicross_install_path }}/settings.yaml" }
-
