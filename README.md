@@ -2,6 +2,7 @@ oxr463.ansible_role_tedicross
 ==============================
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/oxr463/ansible-role-tedicross/Lint?style=flat-square)
+![GitHub](https://img.shields.io/github/license/oxr463/ansible-role-tedicross?style=flat-square)
 
 Ansible role for TediCross
 
