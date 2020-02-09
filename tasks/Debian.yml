@@ -1,6 +1,6 @@
 ---
 - name: Install Node.js
-  action: apt pkg={{ item }} state=latest
+  action: apt pkg={{ item }} state=present
   with_items:
     - nodejs
 
