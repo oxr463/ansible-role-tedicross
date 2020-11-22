@@ -5,4 +5,4 @@ tedicross_group: "{{ tedicross_user }}"
 tedicross_bridge_name: "First bridge"
 tedicross_install_path: /opt/tedicross
 tedicross_node_path: /usr/bin/node
-tedicross_version: '0.9.10'
+tedicross_version: '0.10.5'
